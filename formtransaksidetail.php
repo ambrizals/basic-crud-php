@@ -52,26 +52,31 @@
 
             <fieldset>
                 <legend>Daftar Sewa</legend>
-                <table width="100%">
-                    <tr>
-                        <th>Nama Mobil</th>
-                        <th>Lama Sewa</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="mobil" class="input_text">
-                                <?php
-                                    while($dataMobil = mysqli_fetch_array($queryMobil)){
-                                        echo '<option value="'.$dataMobil['id_mobil'].'">'.$dataMobil['nama_mobil'].' - '.$dataMobil['harga_sewa'].'</option>';
-                                    }
-                                ?>
-                            </select>
-                        </td>
-                        <td>
-                            <input type="number" class="input_text" name="lama_sewa" required />
-                        </td>
-                    </tr>
-                </table>
+                <form action="simpandetail.php" method="POST">
+                    <table width="100%">
+                        <tr>
+                            <th>Nama Mobil</th>
+                            <th>Lama Sewa</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="mobil" class="input_text">
+                                    <?php
+                                        while($dataMobil = mysqli_fetch_array($queryMobil)){
+                                            echo '<option value="'.$dataMobil['id_mobil'].'">'.$dataMobil['nama_mobil'].' - Rp.'.$dataMobil['harga_sewa'].'</option>';
+                                        }
+                                    ?>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" class="input_text" name="lama_sewa" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit" name="btnAddDetail" class="input_text">Tambah Data</button></td>
+                        </tr>
+                    </table>
+                </form>
             </fieldset>
         </div>
     </body>

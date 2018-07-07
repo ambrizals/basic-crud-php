@@ -27,12 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `tb_mobil` (
-  `id_mobil` varchar(20) NOT NULL,
-  `nama_mobil` varchar(30) NOT NULL,
-  `harga_sewa` int(50) NOT NULL,
-  `no_pol` varchar(20) NOT NULL,
+  `id_mobil` INT NOT NULL AUTO_INCREMENT,
+  `nama_mobil` VARCHAR(30) NOT NULL,
+  `harga_sewa` INT(50) NOT NULL,
+  `no_pol` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_mobil`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=INNODB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

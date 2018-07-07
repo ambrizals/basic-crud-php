@@ -31,8 +31,8 @@
                     <th colspan="2">Aksi</th>
                 </tr>
                 <?php
-                    $data = $koneksi->query(listMobil()); // Query untuk menampilkan semua data user
-                    while($data = mysqli_fetch_array($data)){ // Ambil semua data dari hasil eksekusi $sql
+                    $mobil = $koneksi->query(listMobil()); // Query untuk menampilkan semua data user
+                    while($data = mysqli_fetch_array($mobil)){ // Ambil semua data dari hasil eksekusi $sql
                     echo "<tr>";
                     echo "<td>".$data['id_mobil']."</td>";
                     echo "<td>".$data['nama_mobil']."</td>";

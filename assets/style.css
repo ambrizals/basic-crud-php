@@ -86,3 +86,6 @@ body{
 .box_dashboard p {
 	padding:3em 0;
 }
+table  .input_text {
+	width:100%;
+}
